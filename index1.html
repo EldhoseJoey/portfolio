@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Jay | Portfolio</title>
+
+    <!-- Styles & Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.min.js"></script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: linear-gradient(to bottom right, #000000, #1a1a1a);
+        color: white;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border-radius: 1rem;
+      }
+      .neon-button {
+        border: 2px solid #1a1038;
+        box-shadow: 0 0 5px #1a1038, 0 0 10px #1a1038, 0 0 20px #1a1038;
+        transition: all 0.3s ease-in-out;
+      }
+      .neon-button:hover {
+        background-color: #1a1038;
+        color: rgb(233, 215, 215);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 🧭 Navbar -->
+    <nav class="fixed top-0 left-0 w-full z-50 px-8 py-4 flex justify-between items-center glass shadow-md">
+      <img src="photos/logo.png" alt="eldcoded logo" class="h-16 w-auto" />
+      <ul class="hidden md:flex space-x-8 text-sm uppercase font-semibold">
+        <li><a href="#home" class="hover:text-blue-300">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-300">About</a></li>
+        <li><a href="#skills" class="hover:text-blue-300">Skills</a></li>
+        <li><a href="#projects" class="hover:text-blue-300">Projects</a></li>
+        <li><a href="#blogs" class="hover:text-blue-300">Blogs</a></li>
+        <li><a href="#contact" class="hover:text-blue-300">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- 🎥 Hero Section -->
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20 relative overflow-hidden">
+      <video autoplay muted loop class="absolute w-full h-full object-cover opacity-10 -z-10">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-background-of-particles-3097-large.mp4" type="video/mp4" />
+      </video>
+      <lottie-player
+        src="https://lottie.host/b3876efb-55df-4550-9a5b-80e7b72b4797/a7yO6ZckVq.json"
+        background="transparent"
+        speed="1"
+        style="width: 250px; height: 250px"
+        loop
+        autoplay
+      ></lottie-player>
+      <h1 class="text-5xl md:text-7xl font-extrabold">Hey, I'm Jay</h1>
+      <p class="mt-4 text-lg md:text-xl text-gray-300">Building AI-Infused Embedded Magic 🧠⚙️</p>
+      <a href="#projects" class="mt-8 px-6 py-3 neon-button rounded-full">Explore My Work</a>
+    </section>
+
+      <!-- 👤 About -->
+      <section id="about" class="px-6 py-20 max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-10">About Me</h2>
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <img src="photos/earth.jpg" alt="Jay" class="rounded-xl shadow-lg w-52 h-52 object-cover" />
+          <p class="text-lg text-gray-300">I’m an innovative software engineer with a deep love for embedded systems and AI. I create things that live at the edge of hardware and intelligence — from Raspberry Pi-powered assistants to dev tools enhanced by LLMs.</p>
+        </div>
+      </section>
+
+      <!-- 🧠 Skills -->
+      <section id="skills" class="px-6 py-20 bg-gray-900">
+        <h2 class="text-3xl font-bold text-center mb-12">Tech Stack</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+          <div class="bg-white bg-opacity-5 p-6 rounded-lg shadow hover:scale-105 transition-transform">
+            <i class="ri-html5-line text-4xl text-yellow-400"></i>
+            <p class="mt-2">HTML/CSS/JS</p>
+          </div>
+          <div class="bg-white bg-opacity-5 p-6 rounded-lg shadow hover:scale-105 transition-transform">
+            <i class="ri-python-line text-4xl text-green-400"></i>
+            <p class="mt-2">Python</p>
+          </div>
+          <div class="bg-white bg-opacity-5 p-6 rounded-lg shadow hover:scale-105 transition-transform">
+            <i class="ri-cpu-line text-4xl text-pink-400"></i>
+            <p class="mt-2">Embedded Systems</p>
+          </div>
+          <div class="bg-white bg-opacity-5 p-6 rounded-lg shadow hover:scale-105 transition-transform">
+            <i class="ri-brain-line text-4xl text-blue-300"></i>
+            <p class="mt-2">AI/ML</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 💼 Projects -->
+      <section id="projects" class="px-6 py-20 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+        <div class="grid gap-10 md:grid-cols-2">
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-purple-600 transition duration-300">
+            <h3 class="text-xl font-semibold mb-2">Pi AI Assistant</h3>
+            <p class="text-gray-300">Built a voice-activated AI assistant using Raspberry Pi + Python + OpenAI APIs for real-time hardware debugging.</p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-purple-600 transition duration-300">
+            <h3 class="text-xl font-semibold mb-2">LLM DevTools</h3>
+            <p class="text-gray-300">Next-gen VS Code extension powered by GPT for instant code generation, editing, and explanation.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ✍️ Blogs -->
+      <section id="blogs" class="px-6 py-20 bg-gray-950">
+        <h2 class="text-3xl font-bold text-center mb-12">Blogs</h2>
+        <div class="text-center">
+          <p class="text-gray-400">Explore my latest insights on AI, Embedded Systems, and Python tricks.</p>
+          <a href="https://eldhosejoey.github.io/blogs/" class="inline-block mt-4 px-6 py-3 neon-button rounded-full">Visit My Blog</a>
+        </div>
+      </section>
+
+      <!-- 📬 Contact -->
+      <section id="contact" class="px-6 py-20 bg-black">
+        <h2 class="text-3xl font-bold text-center mb-6">Contact Me</h2>
+        <p class="text-center mb-6 text-gray-400">Let’s collaborate or just geek out on cool tech 🚀</p>
+        <form action="https://api.web3forms.com/submit" method="POST" class="max-w-xl mx-auto text-center">
+          <input type="hidden" name="access_key" value="a3076eea-301a-44e7-aed8-5126a5b7503a" />
+          <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 mb-4 rounded text-black" />
+          <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 mb-4 rounded text-black" />
+          <textarea name="message" rows="5" placeholder="Your Message" required class="w-full p-3 mb-4 rounded text-black"></textarea>
+          <button type="submit" class="px-6 py-3 neon-button rounded-full">Send Message</button>
+        </form>
+      </section>
+
+    <!-- 🔚 Footer -->
+    <footer class="py-6 text-center text-sm text-gray-500">
+      <p>&copy; 2025 Jay. Built with 💡, ⚙️ & ❤️</p>
+    </footer>
+
+    <!-- 🧠 Scripts -->
+    <script>
+      ScrollReveal().reveal("section", {
+        delay: 200,
+        distance: "50px",
+        origin: "bottom",
+        duration: 700,
+        reset: false
+      });
+
+      gsap.from("h1", { opacity: 0, y: -20, duration: 1, ease: "power2.out" });
+    </script>
+  </body>
+</html>
+
